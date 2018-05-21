@@ -15,7 +15,7 @@
 
 `friend-sites.json`文件示例：
 
-```json
+```js
 [
     {
         "url": "https://github.com/CPP-CLANNAD",
@@ -28,3 +28,18 @@
     }
 ]
 ```
+
+访问<https://cpp-clannad.github.io/friend-sites/friend-sites.json>即可获取友链列表，JS示例：
+
+```js
+fetch('https://cpp-clannad.github.io/friend-sites/friend-sites.json')
+    .then(res => res.json())
+    .then(sites => {
+        console.log(sites);
+    })
+    .catch(err => {
+        console.log(err)
+    });
+```
+
+已知问题：AdBlock插件会导致请求失败
