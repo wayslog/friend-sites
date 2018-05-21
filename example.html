@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example</title>
+    <style>
+        #friend-sites > a:not(:last-child) {
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>友情链接</h2>
+    <div id="friend-sites">正在获取...</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let el = document.getElementById('friend-sites');
+            let html = '';
+            fetch('https://cpp-clannad.github.io/friend-sites/friend-sites.json')
+                .then(res => res.json())
+                .then(sites => {
+                    for(let site of sites) {
+                        html += `<a href="${site.url}">${site.title}</a>`;
+                    }
+                    el.innerHTML = html;
+                })
+                .catch(err => {
+                    el.innerText = err.message;
+                });
+            // end
+        });
+    </script>
+</body>
+</html>

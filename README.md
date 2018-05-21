@@ -42,4 +42,6 @@ fetch('https://cpp-clannad.github.io/friend-sites/friend-sites.json')
     });
 ```
 
+<https://cpp-clannad.github.io/friend-sites/example.html>为一个完整的使用示例
+
 已知问题：AdBlock插件会导致请求失败
