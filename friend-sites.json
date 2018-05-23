@@ -8,5 +8,17 @@
         "url": "https://blog.qvq.moe/",
         "title": "Shiroko的弱鸡心得",
         "owner": "空白(用户、Shiroko)"
+    },
+    {
+        "url":"http://kuranado.moe",
+        "title":"繁星的主页",
+        "owner":"繁星",
+        "introduction":"未完成网站"
+    },
+    {
+        "url": "网站URL",
+        "title": "网站标题",
+        "owner": "站长昵称",
+        "introduction": "可选的简介"
     }
 ]
